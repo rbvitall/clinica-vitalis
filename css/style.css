@@ -136,7 +136,7 @@ p:last-child { margin-bottom: 0; }
   font-weight: 600;
   letter-spacing: .02em;
   padding: 15px 30px;
-  border-radius: 2px;
+  border-radius: 999px;
   text-decoration: none;
   border: 1px solid transparent;
   cursor: pointer;
@@ -191,9 +191,12 @@ p:last-child { margin-bottom: 0; }
   padding: 9px var(--e4);
   font-size: 12px;
   opacity: 1;
-  color: var(--paper);
 }
-.bar-cta:hover { color: var(--hi); }
+/* O CTA fica dentro de <nav>, então ".bar nav a" venceria a cor e deixava o
+   texto escuro (invisível sobre o fundo do botão). Este seletor é mais
+   específico e garante o texto claro. */
+.bar nav a.bar-cta,
+.bar nav a.bar-cta:hover { color: var(--hi); }
 
 /* Botão do menu mobile — a referência simplesmente escondia a navegação;
    aqui ela continua alcançável pelo teclado e pelo leitor de tela. */
