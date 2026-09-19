@@ -119,4 +119,5 @@ def nao_encontrado(_):
 
 if __name__ == "__main__":
     print("API da Clínica Vitalis rodando em http://localhost:5001")
-    app.run(host="0.0.0.0", port=5001, debug=True)
+    # debug=False e host local: sem depurador exposto nem acesso pela rede.
+    app.run(host="127.0.0.1", port=5001, debug=False)

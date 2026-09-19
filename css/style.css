@@ -142,8 +142,8 @@ p:last-child { margin-bottom: 0; }
   cursor: pointer;
   transition: .25s;
 }
-.btn-p { background: var(--ink); color: var(--paper); }
-.btn-p:hover { background: var(--olive); color: var(--hi); }
+.btn-p { background: #3d4a32; color: var(--hi); }
+.btn-p:hover { background: #2c3626; color: var(--hi); }
 .btn-g { background: transparent; color: var(--ink); border-color: var(--line); }
 .btn-g:hover { border-color: var(--ink); }
 

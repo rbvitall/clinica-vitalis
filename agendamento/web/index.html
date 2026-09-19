@@ -164,6 +164,9 @@ let sel = { especialidade:null, profissional:null, profNome:null, especNome:null
 
 function el(id){ return document.getElementById(id); }
 function mostrar(id, v){ el(id).hidden = !v; }
+// escapa HTML antes de inserir com innerHTML (proteção contra XSS)
+function esc(s){ return String(s==null?"":s).replace(/[&<>"']/g,function(c){
+  return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]; }); }
 
 function mostrarAba(qual){
   el("aba-agendar").hidden = qual!=="agendar";
@@ -199,7 +202,7 @@ async function escolherEspecialidade(e, botao){
   profs.forEach(p=>{
     const d=document.createElement("div");
     d.className="prof__item";
-    d.innerHTML=`<div><div class="prof__nome">${p.nome}</div><div class="prof__meta">${p.especialidade_nome}</div></div><div class="prof__reg">${p.registro}</div>`;
+    d.innerHTML=`<div><div class="prof__nome">${esc(p.nome)}</div><div class="prof__meta">${esc(p.especialidade_nome)}</div></div><div class="prof__reg">${esc(p.registro)}</div>`;
     d.onclick=()=>escolherProfissional(p, d);
     box.appendChild(d);
   });
@@ -220,7 +223,7 @@ async function escolherProfissional(p, node){
   if(!d.dias || !d.dias.length){ box.innerHTML="<p class='hint'>Sem horários livres nos próximos dias.</p>"; return; }
   d.dias.forEach(dia=>{
     const div=document.createElement("div"); div.className="dia";
-    div.innerHTML=`<div class="dia__cab">${dia.dia_semana} <span>· ${dia.data_br}</span></div>`;
+    div.innerHTML=`<div class="dia__cab">${esc(dia.dia_semana)} <span>· ${esc(dia.data_br)}</span></div>`;
     const slots=document.createElement("div"); slots.className="slots";
     dia.horarios.forEach(h=>{
       const s=document.createElement("button");
@@ -237,7 +240,7 @@ function escolherHorario(dia,h,node){
   sel.data=dia.data; sel.dataBr=dia.data_br; sel.horario=h;
   document.querySelectorAll("#disponibilidade .slot").forEach(c=>c.classList.remove("sel"));
   node.classList.add("sel");
-  el("resumo").innerHTML=`<b>${sel.especNome}</b> com <b>${sel.profNome}</b><br>${dia.dia_semana}, ${dia.data_br} às <b>${h}</b>`;
+  el("resumo").innerHTML=`<b>${esc(sel.especNome)}</b> com <b>${esc(sel.profNome)}</b><br>${esc(dia.dia_semana)}, ${esc(dia.data_br)} às <b>${esc(h)}</b>`;
   mostrar("s4",true); mostrar("erro-agendar",false);
   el("s4").scrollIntoView({behavior:"smooth",block:"nearest"});
 }
@@ -267,8 +270,8 @@ async function confirmar(){
     const a=d.agendamento;
     el("aba-agendar").innerHTML=`<div class="msg msg--ok" style="margin:0">
         <strong>Agendamento confirmado!</strong><br>
-        ${a.especialidade_nome} com ${a.profissional_nome}<br>
-        ${a.data_br} às ${a.horario} · protocolo #${a.id}<br><br>
+        ${esc(a.especialidade_nome)} com ${esc(a.profissional_nome)}<br>
+        ${esc(a.data_br)} às ${esc(a.horario)} · protocolo #${esc(a.id)}<br><br>
         Guarde seu CPF para consultar ou cancelar na aba “Meus agendamentos”.
       </div>
       <button class="btn btn--ghost" style="margin-top:16px" onclick="location.reload()">Fazer outro agendamento</button>`;
@@ -290,9 +293,9 @@ async function consultar(){
     const cancelavel = a.status==="ativo"
       ? `<div class="ag__acao"><button class="btn btn--danger" onclick="cancelar(${a.id})">Cancelar agendamento</button></div>` : "";
     div.innerHTML=`<div class="ag__top">
-        <div><div class="ag__quem">${a.especialidade_nome} · ${a.profissional_nome}</div>
-        <div class="ag__meta">${a.nome} · ${a.data_br} às ${a.horario} · #${a.id}</div></div>
-        <span class="pill pill--${a.status}">${a.status}</span>
+        <div><div class="ag__quem">${esc(a.especialidade_nome)} · ${esc(a.profissional_nome)}</div>
+        <div class="ag__meta">${esc(a.nome)} · ${esc(a.data_br)} às ${esc(a.horario)} · #${esc(a.id)}</div></div>
+        <span class="pill pill--${esc(a.status)}">${esc(a.status)}</span>
       </div>${cancelavel}`;
     el("lista-meus").appendChild(div);
   });

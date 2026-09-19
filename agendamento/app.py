@@ -86,10 +86,30 @@ def formatar_cpf(cpf):
 
 
 def achar_profissional(dados, pid):
+    try:
+        pid = int(pid)
+    except (TypeError, ValueError):
+        return None
     for p in dados["profissionais"]:
-        if p["id"] == int(pid):
+        if p["id"] == pid:
             return p
     return None
+
+
+def slot_disponivel(prof, data_, horario):
+    """Confere se a data/horário existem de fato na agenda do profissional."""
+    try:
+        dia = date.fromisoformat(str(data_))
+    except (TypeError, ValueError):
+        return False, "Data inválida."
+    hoje = date.today()
+    if not (hoje < dia <= hoje + timedelta(days=21)):
+        return False, "Data fora do período de agendamento (próximos 21 dias)."
+    if DIAS[dia.weekday()] not in prof["atende_dias"]:
+        return False, "O profissional não atende nesse dia."
+    if horario not in prof["horarios"]:
+        return False, "Horário indisponível para esse profissional."
+    return True, None
 
 
 def nome_especialidade(dados, esp_id):
@@ -170,8 +190,8 @@ def api_criar():
     horario = corpo.get("horario")
 
     # validações
-    if len(nome) < 3:
-        return jsonify({"erro": "Informe o nome completo."}), 400
+    if len(nome) < 3 or len(nome) > 80:
+        return jsonify({"erro": "Informe o nome completo (3 a 80 caracteres)."}), 400
     if not cpf_valido(cpf):
         return jsonify({"erro": "CPF inválido. Confira os números."}), 400
     prof = achar_profissional(dados, pid) if pid else None
@@ -179,6 +199,9 @@ def api_criar():
         return jsonify({"erro": "Selecione um profissional válido."}), 400
     if not data_ or not horario:
         return jsonify({"erro": "Selecione a data e o horário."}), 400
+    ok, msg = slot_disponivel(prof, data_, horario)
+    if not ok:
+        return jsonify({"erro": msg}), 400
 
     agendamentos = carregar_agendamentos()
     # evita marcar o mesmo horário duas vezes
@@ -241,4 +264,6 @@ def estaticos(arquivo):
 
 if __name__ == "__main__":
     print("Agendamento da Clínica Vitalis em http://localhost:5002")
-    app.run(host="0.0.0.0", port=5002, debug=True)
+    # debug=False: não expõe o depurador interativo do Werkzeug (evita execução
+    # remota de código) nem stack traces ao usuário.
+    app.run(host="127.0.0.1", port=5002, debug=False)
