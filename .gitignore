@@ -1,7 +1,10 @@
 # Python
 __pycache__/
-*.py[cod]
+*.pyc
+*.pyo
 *.egg-info/
+
+# Ambientes virtuais
 .venv/
 venv/
 env/
@@ -18,3 +21,7 @@ desktop.ini
 
 # Saída de trabalho (capturas, rascunhos) — não versionar
 Claude outputs/
+
+# Observação: dados/*.json É versionado de propósito
+# (dados.json alimenta a landing page e profissionais.json os Projetos 02 e 03).
+# agendamento/agendamentos.json também fica versionado, vazio ([]).
