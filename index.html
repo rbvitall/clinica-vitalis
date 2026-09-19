@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clínica Vitalis — consultas de 40 minutos no Lago Sul, Brasília</title>
+  <meta name="description" content="Clínica de saúde em Brasília com consultas de 40 minutos: clínica geral, exames, nutrição e procedimentos. Equipe registrada, agenda curta de propósito.">
+  <meta name="theme-color" content="#F6F5F0">
+  <meta name="author" content="Clínica Vitalis">
+
+  <!-- Open Graph: como o link aparece ao ser compartilhado -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Clínica Vitalis">
+  <meta property="og:title" content="Clínica Vitalis — consultas de 40 minutos no Lago Sul, Brasília">
+  <meta property="og:description" content="Clínica de saúde em Brasília com consultas de 40 minutos: clínica geral, exames, nutrição e procedimentos. Equipe registrada, agenda curta de propósito.">
+  <meta property="og:image" content="assets/img/favicon.svg">
+
+  <!-- Tipografia: Cormorant (títulos) + Public Sans (corpo) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Public+Sans:wght@400;500;600&display=swap">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+
+  <!-- Sem JS e sem animation-timeline, o reveal não pode esconder o conteúdo -->
+  <noscript><style>.reveal{opacity:1!important;transform:none!important;animation:none!important}</style></noscript>
+</head>
+<body>
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- =========================== BARRA FIXA ========================== -->
+  <div class="bar">
+    <a class="logo" href="#topo">Vitalis</a>
+    <button class="bar-menu" type="button" aria-expanded="false" aria-controls="nav-principal">Menu</button>
+    <nav id="nav-principal" aria-label="Navegação principal">
+      <a href="#servicos">Serviços</a>
+      <a href="#equipe">Equipe</a>
+      <a href="#depoimentos">Depoimentos</a>
+      <a href="#faq">Dúvidas</a>
+      <a href="#contato">Contato</a>
+      <!-- O CTA primário fica sempre ao alcance, no topo -->
+      <a class="btn btn-p bar-cta" href="#contato">Agendar consulta</a>
+    </nav>
+  </div>
+
+  <main id="conteudo">
+
+    <!-- ============================== HERO ============================= -->
+    <!-- EFEITO 1: orbs animados + paralaxe · EFEITO 2: plate inclinado em 3D -->
+    <section class="hero" id="topo">
+      <div class="hero-layer" data-speed="0.15" aria-hidden="true">
+        <span class="orb o1"></span><span class="orb o2"></span><span class="orb o3"></span>
+      </div>
+      <div class="hero-layer" data-speed="0.32" aria-hidden="true"><span class="sun"></span></div>
+      <div class="hero-layer" data-speed="0.06" aria-hidden="true">
+        <svg class="hills" viewBox="0 0 1440 400" preserveAspectRatio="none" focusable="false">
+          <path d="M0 240 C 220 150 420 300 720 220 C 1000 150 1200 300 1440 210 L1440 400 L0 400Z" fill="#cdd2bd"/>
+          <path d="M0 300 C 260 230 520 340 820 280 C 1080 230 1280 340 1440 290 L1440 400 L0 400Z" fill="#b9c0a2"/>
+        </svg>
+      </div>
+
+      <div class="hero-plate" id="plate">
+        <p class="eyebrow">Clínica Vitalis</p>
+        <h1>Cuidar<br>é presença</h1>
+        <p class="sub">Uma clínica pensada no tempo de cada paciente — do primeiro olhar ao acompanhamento.</p>
+        <div class="hero-cta">
+          <a class="btn btn-p" href="#contato">Agendar consulta</a>
+          <a class="btn btn-g" href="#servicos">Conhecer serviços</a>
+        </div>
+
+        <!-- Confiança na dobra: a prova fica ao lado do primeiro CTA -->
+        <div class="prova">
+          <p class="prova__nota">
+            <svg class="prova__estrelas" viewBox="0 0 90 16" role="img" aria-hidden="true" focusable="false"><defs><linearGradient id="nota-hero" x1="0" x2="1" y1="0" y2="0"><stop offset="98%" stop-color="currentColor"/><stop offset="98%" stop-color="transparent"/></linearGradient></defs><g class="prova__estrelas-vazias"><path transform="translate(0,0)" d="M8 1l2 4.6 5 .5-3.8 3.3 1.1 4.9L8 11.7 3.7 14.3l1.1-4.9L1 6.1l5-.5z"/><path transform="translate(18,0)" d="M8 1l2 4.6 5 .5-3.8 3.3 1.1 4.9L8 11.7 3.7 14.3l1.1-4.9L1 6.1l5-.5z"/><path transform="translate(36,0)" d="M8 1l2 4.6 5 .5-3.8 3.3 1.1 4.9L8 11.7 3.7 14.3l1.1-4.9L1 6.1l5-.5z"/><path transform="translate(54,0)" d="M8 1l2 4.6 5 .5-3.8 3.3 1.1 4.9L8 11.7 3.7 14.3l1.1-4.9L1 6.1l5-.5z"/><path transform="translate(72,0)" d="M8 1l2 4.6 5 .5-3.8 3.3 1.1 4.9L8 11.7 3.7 14.3l1.1-4.9L1 6.1l5-.5z"/></g><g fill="url(#nota-hero)"><path transform="translate(0,0)" d="M8 1l2 4.6 5 .5-3.8 3.3 1.1 4.9L8 11.7 3.7 14.3l1.1-4.9L1 6.1l5-.5z"/><path transform="translate(18,0)" d="M8 1l2 4.6 5 .5-3.8 3.3 1.1 4.9L8 11.7 3.7 14.3l1.1-4.9L1 6.1l5-.5z"/><path transform="translate(36,0)" d="M8 1l2 4.6 5 .5-3.8 3.3 1.1 4.9L8 11.7 3.7 14.3l1.1-4.9L1 6.1l5-.5z"/><path transform="translate(54,0)" d="M8 1l2 4.6 5 .5-3.8 3.3 1.1 4.9L8 11.7 3.7 14.3l1.1-4.9L1 6.1l5-.5z"/><path transform="translate(72,0)" d="M8 1l2 4.6 5 .5-3.8 3.3 1.1 4.9L8 11.7 3.7 14.3l1.1-4.9L1 6.1l5-.5z"/></g></svg>
+            <strong>4,9/5</strong>
+            <span class="prova__rotulo">avaliação média de 8.400 pacientes</span>
+            <span class="sr-so">4,9/5 — avaliação média de 8.400 pacientes</span>
+          </p>
+          <ul class="prova__lista"><li class="prova__item">8.400+ pacientes atendidos</li><li class="prova__item">12 anos de cuidado</li><li class="prova__item">Equipe registrada no CRM/DF</li></ul>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ============================ MARQUEE ============================ -->
+    <!-- EFEITO 7: faixa em loop infinito. A segunda cópia é só visual. -->
+    <section class="marquee" aria-label="Especialidades e serviços da clínica">
+      <div class="marquee__track">
+        <div class="marquee__grupo"><span class="marquee__item">check-up anual</span><span class="marquee__item">nutrição clínica</span><span class="marquee__item">exames laboratoriais</span><span class="marquee__item">vacinas</span><span class="marquee__item">saúde da mulher</span><span class="marquee__item">acompanhamento contínuo</span><span class="marquee__item">clínica geral</span><span class="marquee__item">diagnóstico por imagem</span><span class="marquee__item">pequenos procedimentos</span><span class="marquee__item">saúde do idoso</span></div>
+        <div class="marquee__grupo" aria-hidden="true"><span class="marquee__item">check-up anual</span><span class="marquee__item">nutrição clínica</span><span class="marquee__item">exames laboratoriais</span><span class="marquee__item">vacinas</span><span class="marquee__item">saúde da mulher</span><span class="marquee__item">acompanhamento contínuo</span><span class="marquee__item">clínica geral</span><span class="marquee__item">diagnóstico por imagem</span><span class="marquee__item">pequenos procedimentos</span><span class="marquee__item">saúde do idoso</span></div>
+      </div>
+    </section>
+
+    <!-- =========================== MANIFESTO =========================== -->
+    <section class="manifesto wrap" aria-labelledby="manifesto-titulo">
+      <h2 class="reveal" id="manifesto-titulo">Menos pressa.<br>Mais <em>atenção</em><br>ao que realmente importa.</h2>
+    </section>
+
+    <!-- ===================== SERVIÇOS EM PROFUNDIDADE ================== -->
+    <!-- EFEITO 3: seção presa (sticky); os painéis avançam em Z ao rolar -->
+    <section class="pin-wrap" id="servicos" style="height:248vh" aria-labelledby="servicos-titulo">
+      <div class="pin">
+        <div class="pin-title">
+          <p class="eyebrow">O que fazemos</p>
+          <h2 id="servicos-titulo">Nossos serviços</h2>
+        </div>
+
+        <article class="panel" data-i="0" id="servico-atendimento">
+          <div class="card">
+            <div class="txt">
+              <span class="num">01</span>
+              <h3>Atendimento médico</h3>
+              <p>Consultas de clínica geral e acompanhamento contínuo, com quarenta minutos reservados para ouvir antes de indicar qualquer conduta.</p>
+            </div>
+            <div class="art">
+              <img src="assets/img/servico-atendimento.jpg" alt="Foto de um consultório médico acolhedor, com estetoscópio e prontuário sobre a mesa." width="800" height="600" loading="lazy" decoding="async">
+            </div>
+          </div>
+        </article>
+        <article class="panel" data-i="1" id="servico-exames">
+          <div class="card">
+            <div class="txt">
+              <span class="num">02</span>
+              <h3>Exames e imagem</h3>
+              <p>Coleta no próprio consultório e encaminhamento para imagem em parceiros credenciados, com resultado comentado pessoalmente.</p>
+            </div>
+            <div class="art">
+              <img src="assets/img/servico-exames.jpg" alt="Foto de um laboratório com tubos de coleta de sangue e equipamento de ultrassom ao fundo." width="800" height="600" loading="lazy" decoding="async">
+            </div>
+          </div>
+        </article>
+        <article class="panel" data-i="2" id="servico-nutricao">
+          <div class="card">
+            <div class="txt">
+              <span class="num">03</span>
+              <h3>Nutrição</h3>
+              <p>Planos alimentares construídos a partir da sua rotina real, sem dietas genéricas e sem metas que não cabem na sua semana.</p>
+            </div>
+            <div class="art">
+              <img src="assets/img/servico-nutricao.jpg" alt="Foto de uma mesa com prato saudável de salmão, quinoa e legumes, frutas e vegetais frescos." width="800" height="600" loading="lazy" decoding="async">
+            </div>
+          </div>
+        </article>
+        <article class="panel" data-i="3" id="servico-procedimentos">
+          <div class="card">
+            <div class="txt">
+              <span class="num">04</span>
+              <h3>Procedimentos</h3>
+              <p>Pequenos procedimentos ambulatoriais, curativos, aplicação de vacinas e acompanhamento pós-operatório em ambiente tranquilo.</p>
+            </div>
+            <div class="art">
+              <img src="assets/img/servico-procedimentos.jpg" alt="Foto de uma sala de procedimentos organizada, com bandeja de materiais e maca." width="800" height="600" loading="lazy" decoding="async">
+            </div>
+          </div>
+        </article>
+
+        <div class="progress" aria-hidden="true">
+          <i data-p="0"></i><i data-p="1"></i><i data-p="2"></i><i data-p="3"></i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== SUA PRIMEIRA CONSULTA ==================== -->
+    <!-- O que esperar, em três passos. Tira o medo de marcar. -->
+    <section class="passos-sec" id="primeira-consulta" aria-labelledby="passos-titulo">
+      <div class="wrap">
+        <div class="secao-head reveal">
+          <p class="eyebrow">Sem surpresas</p>
+          <h2 id="passos-titulo">Como é a sua<br>primeira consulta</h2>
+        </div>
+
+        <ol class="passos">
+          <li class="passo reveal" id="passo-agende">
+            <svg class="passo__icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 9.5h17M8 3v4M16 3v4"/><path d="M8 14h3"/></svg>
+            <p class="passo__numero">Passo 1</p>
+            <h3 class="passo__titulo">Agende</h3>
+            <p class="passo__texto">Escolha o dia e o horário que cabem na sua rotina — por telefone, WhatsApp ou pelo formulário desta página.</p>
+          </li>
+          <li class="passo reveal" id="passo-acolhimento">
+            <svg class="passo__icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 10a6 6 0 0 1 12 0v3a4 4 0 0 1-4 4h-1"/><rect x="3.5" y="10" width="3.5" height="5.5" rx="1.75"/><rect x="17" y="10" width="3.5" height="5.5" rx="1.75"/><path d="M11 20.5h2"/></svg>
+            <p class="passo__numero">Passo 2</p>
+            <h3 class="passo__titulo">Acolhimento</h3>
+            <p class="passo__texto">Recepção sem fila, escuta e avaliação sem pressa. A consulta dura cerca de quarenta minutos e começa pela sua história.</p>
+          </li>
+          <li class="passo reveal" id="passo-continuidade">
+            <svg class="passo__icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20.5 12a8.5 8.5 0 1 1-2.6-6.1"/><path d="M20.5 3.5v5h-5"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>
+            <p class="passo__numero">Passo 3</p>
+            <h3 class="passo__titulo">Cuidado contínuo</h3>
+            <p class="passo__texto">Você sai com um plano claro, escrito. O acompanhamento segue por telefone, e o retorno em 30 dias não tem custo.</p>
+          </li>
+        </ol>
+
+        <p class="trazer reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+               stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+            <path d="M14.5 3.5H7a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/>
+            <path d="M14.5 3.5V8H19M8.5 13h7M8.5 16.5h4.5"/>
+          </svg>
+          O que trazer: um documento com foto e, se tiver, exames anteriores e a lista de medicamentos em uso.
+        </p>
+      </div>
+    </section>
+
+    <!-- ========================== SEÇÃO ESCURA ========================= -->
+    <!-- EFEITO 4: contadores sobem na viewport; o brilho faz paralaxe -->
+    <section class="dark" aria-labelledby="numeros-titulo">
+      <div class="glow" data-speed="0.2" aria-hidden="true"></div>
+      <div class="wrap">
+        <h2 class="lead reveal" id="numeros-titulo">Doze anos cuidando de gente de verdade.</h2>
+
+        <dl class="stats">
+          <div class="stat reveal">
+            <dt class="l">anos de cuidado</dt>
+            <dd class="n" data-count="12">12</dd>
+          </div>
+          <div class="stat reveal">
+            <dt class="l">pacientes acompanhados</dt>
+            <dd class="n" data-count="8400" data-suffix="+">8.400+</dd>
+          </div>
+          <div class="stat reveal">
+            <dt class="l">avaliação média</dt>
+            <dd class="n" data-count="49" data-div="10" data-suffix="/5">4,9/5</dd>
+          </div>
+        </dl>
+
+        <ul class="selos reveal">
+          <li><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8.5l3.2 3.2L13 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Registro CRM/DF ativo</li>
+          <li><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8.5l3.2 3.2L13 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Dados protegidos pela LGPD</li>
+          <li><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8.5l3.2 3.2L13 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Consulta de 40 minutos</li>
+          <li><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8.5l3.2 3.2L13 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Retorno sem custo em 30 dias</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================= EQUIPE ============================ -->
+    <section class="team-sec wrap" id="equipe" aria-labelledby="equipe-titulo">
+      <div class="team-head reveal">
+        <div>
+          <p class="eyebrow">Quem atende</p>
+          <h2 id="equipe-titulo">Quem cuida<br>de você</h2>
+        </div>
+        <p>Profissionais registrados e dedicados a um atendimento próximo, com agenda curta de propósito.</p>
+      </div>
+      <div class="team">
+        <article class="tcard reveal">
+          <div class="av">
+            <img src="assets/img/equipe-helena.jpg" alt="Foto da Dra. Helena Marchetti, clínica geral, de jaleco branco em seu consultório." width="400" height="500" loading="lazy" decoding="async">
+          </div>
+          <h3>Dra. Helena Marchetti</h3>
+          <p class="role">Clínica geral · Diretora técnica</p>
+          <p class="crm">CRM/DF 12345</p>
+          <p class="bio">Doze anos em consultório próprio, dedicados ao acompanhamento longo das mesmas famílias.</p>
+        </article>
+        <article class="tcard reveal">
+          <div class="av">
+            <img src="assets/img/equipe-ivo.jpg" alt="Foto do Dr. Ivo Nakamura, medicina interna, na clínica." width="400" height="500" loading="lazy" decoding="async">
+          </div>
+          <h3>Dr. Ivo Nakamura</h3>
+          <p class="role">Medicina interna</p>
+          <p class="crm">CRM/DF 23456</p>
+          <p class="bio">Cuida de casos crônicos com um princípio simples: nenhum exame pedido sem explicação.</p>
+        </article>
+        <article class="tcard reveal">
+          <div class="av">
+            <img src="assets/img/equipe-daniel.jpg" alt="Foto do Dr. Daniel Tavares, procedimentos e diagnóstico, durante um atendimento." width="400" height="500" loading="lazy" decoding="async">
+          </div>
+          <h3>Dr. Daniel Tavares</h3>
+          <p class="role">Procedimentos e diagnóstico</p>
+          <p class="crm">CRM/DF 34567</p>
+          <p class="bio">Responsável pelos procedimentos ambulatoriais e pela leitura dos exames, com atenção aos detalhes.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ========================== NOSSA HISTÓRIA ======================= -->
+    <section class="sobre-sec" id="sobre" aria-labelledby="sobre-titulo">
+      <div class="wrap">
+        <div class="secao-head reveal">
+          <p class="eyebrow">Nossa história</p>
+          <h2 id="sobre-titulo">Por que existimos</h2>
+        </div>
+        <div class="sobre-grid">
+          <div class="sobre__texto reveal">
+          <p>A Vitalis nasceu de um incômodo simples: consultas de sete minutos não dão conta de gente. Em 2014 abrimos uma sala no Lago Sul com uma regra que nunca mudou — menos pacientes por dia.</p>
+          <p>Somos uma clínica pequena por escolha. A agenda é curta de propósito, para que ninguém seja atendido com pressa e para que a mesma pessoa acompanhe você ao longo dos anos.</p>
+        </div>
+        <div class="sobre__valores reveal">
+          <div class="valor">
+            <h3 class="valor__titulo">Tempo</h3>
+            <p class="valor__texto">Quarenta minutos por consulta, sempre. O relógio não decide quando a conversa acaba.</p>
+          </div>
+          <div class="valor">
+            <h3 class="valor__titulo">Escuta</h3>
+            <p class="valor__texto">Ouvir antes de indicar. Nenhum exame é pedido sem uma explicação que você entenda.</p>
+          </div>
+          <div class="valor">
+            <h3 class="valor__titulo">Proximidade</h3>
+            <p class="valor__texto">Poucos profissionais, os mesmos rostos. Ligamos para saber do resultado antes que você pergunte.</p>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FAIXA FULL-BLEED (parallax) ===================== -->
+    <section class="photo-band" aria-label="Ambiente da Clínica Vitalis">
+      <div class="photo-band__media"><img class="photo-band__img" src="assets/img/clinica-ambiente.jpg" alt="Recepção acolhedora da Clínica Vitalis, com poltronas verdes, madeira clara e plantas."></div>
+      <div class="photo-band__overlay reveal">
+        <p class="photo-band__eyebrow">Um lugar para respirar</p>
+        <p class="photo-band__frase">Um cuidado no seu tempo,<br>desde a porta.</p>
+      </div>
+    </section>
+
+    <!-- ========================== DEPOIMENTOS ========================== -->
+    <section class="depo-sec" id="depoimentos" aria-labelledby="depoimentos-titulo">
+      <div class="wrap">
+        <div class="secao-head reveal">
+          <p class="eyebrow">Quem já veio</p>
+          <h2 id="depoimentos-titulo">Depoimentos</h2>
+        </div>
+        <div class="depos">
+          <figure class="depo reveal">
+            <div class="estrelas" role="img" aria-label="Avaliação: 5 de 5 estrelas"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 1l2 4.6 5 .5-3.8 3.3 1.1 4.9L8 11.7 3.7 14.3l1.1-4.9L1 6.1l5-.5z" fill="currentColor"/></svg><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 1l2 4.6 5 .5-3.8 3.3 1.1 4.9L8 11.7 3.7 14.3l1.1-4.9L1 6.1l5-.5z" fill="currentColor"/></svg><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 1l2 4.6 5 .5-3.8 3.3 1.1 4.9L8 11.7 3.7 14.3l1.1-4.9L1 6.1l5-.5z" fill="currentColor"/></svg><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 1l2 4.6 5 .5-3.8 3.3 1.1 4.9L8 11.7 3.7 14.3l1.1-4.9L1 6.1l5-.5z" fill="currentColor"/></svg><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 1l2 4.6 5 .5-3.8 3.3 1.1 4.9L8 11.7 3.7 14.3l1.1-4.9L1 6.1l5-.5z" fill="currentColor"/></svg></div>
+            <blockquote>Saí da consulta sabendo exatamente o que eu tinha e por quê. Foi a primeira vez que isso aconteceu.</blockquote>
+            <figcaption>Marina Toledo · Brasília, DF</figcaption>
+          </figure>
+          <figure class="depo reveal">
+            <div class="estrelas" role="img" aria-label="Avaliação: 5 de 5 estrelas"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 1l2 4.6 5 .5-3.8 3.3 1.1 4.9L8 11.7 3.7 14.3l1.1-4.9L1 6.1l5-.5z" fill="currentColor"/></svg><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 1l2 4.6 5 .5-3.8 3.3 1.1 4.9L8 11.7 3.7 14.3l1.1-4.9L1 6.1l5-.5z" fill="currentColor"/></svg><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 1l2 4.6 5 .5-3.8 3.3 1.1 4.9L8 11.7 3.7 14.3l1.1-4.9L1 6.1l5-.5z" fill="currentColor"/></svg><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 1l2 4.6 5 .5-3.8 3.3 1.1 4.9L8 11.7 3.7 14.3l1.1-4.9L1 6.1l5-.5z" fill="currentColor"/></svg><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 1l2 4.6 5 .5-3.8 3.3 1.1 4.9L8 11.7 3.7 14.3l1.1-4.9L1 6.1l5-.5z" fill="currentColor"/></svg></div>
+            <blockquote>Acompanham minha pressão há três anos. Ligam para saber do resultado antes que eu pergunte.</blockquote>
+            <figcaption>Renato Alvim · Águas Claras, DF</figcaption>
+          </figure>
+          <figure class="depo reveal">
+            <div class="estrelas" role="img" aria-label="Avaliação: 4 de 5 estrelas"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 1l2 4.6 5 .5-3.8 3.3 1.1 4.9L8 11.7 3.7 14.3l1.1-4.9L1 6.1l5-.5z" fill="currentColor"/></svg><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 1l2 4.6 5 .5-3.8 3.3 1.1 4.9L8 11.7 3.7 14.3l1.1-4.9L1 6.1l5-.5z" fill="currentColor"/></svg><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 1l2 4.6 5 .5-3.8 3.3 1.1 4.9L8 11.7 3.7 14.3l1.1-4.9L1 6.1l5-.5z" fill="currentColor"/></svg><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 1l2 4.6 5 .5-3.8 3.3 1.1 4.9L8 11.7 3.7 14.3l1.1-4.9L1 6.1l5-.5z" fill="currentColor"/></svg><svg viewBox="0 0 16 16" class="vazia" aria-hidden="true" focusable="false"><path d="M8 1l2 4.6 5 .5-3.8 3.3 1.1 4.9L8 11.7 3.7 14.3l1.1-4.9L1 6.1l5-.5z" fill="currentColor"/></svg></div>
+            <blockquote>Vale a viagem. O tempo de consulta muda completamente a conversa com o médico.</blockquote>
+            <figcaption>Sofia Bandeira · Goiânia, GO</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== FAQ ============================== -->
+    <section class="faq-sec" id="faq" aria-labelledby="faq-titulo">
+      <div class="wrap faq-grid">
+        <div class="reveal">
+          <p class="eyebrow">Antes de vir</p>
+          <h2 class="secao-head" id="faq-titulo" style="margin-bottom:0">Perguntas<br>frequentes</h2>
+        </div>
+        <div class="faq-lista">
+          <details class="faq-item">
+            <summary>Vocês atendem por convênio?</summary>
+            <p>Atendemos de forma particular e emitimos recibo com CRM para reembolso em todos os principais planos. A secretaria orienta o processo de cada convênio.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Quais são os horários de atendimento?</summary>
+            <p>De segunda a sexta, das 8h às 19h, e aos sábados das 8h às 12h. Coletas de exame acontecem apenas pela manhã, até as 10h.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Como funciona a primeira consulta?</summary>
+            <p>Ela dura quarenta minutos e começa pela sua história, não pelo exame. Traga exames anteriores e a lista de medicamentos em uso, se houver.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Como faço para agendar ou remarcar?</summary>
+            <p>Pelo telefone (61) 3200-4100 ou pelo formulário desta página. Retornamos em até um dia útil; remarcações são gratuitas com 24 horas de antecedência.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ CONTATO ============================ -->
+    <section class="contato-sec" id="contato" aria-labelledby="contato-titulo">
+      <div class="wrap contato-grid">
+
+        <div class="reveal">
+          <p class="eyebrow">Fale com a clínica</p>
+          <h2 class="secao-head" id="contato-titulo" style="margin-bottom:0">Agendar<br>consulta</h2>
+
+          <dl class="dados">
+            <div>
+              <dt>Telefone</dt>
+              <dd><a href="tel:+556132004100">(61) 3200-4100</a></dd>
+            </div>
+            <div>
+              <dt>E-mail</dt>
+              <dd><a href="mailto:contato@clinicavitalis.com.br">contato@clinicavitalis.com.br</a></dd>
+            </div>
+            <div>
+              <dt>Endereço</dt>
+              <dd>SHIS QI 15, Bloco C, Sala 204 — Lago Sul, Brasília/DF</dd>
+            </div>
+            <div>
+              <dt>Horário</dt>
+              <dd>Segunda a sexta, 8h às 19h · Sábado, 8h às 12h</dd>
+            </div>
+          </dl>
+
+          <!-- Placeholder de mapa desenhado em SVG — nenhum recurso externo -->
+          <div class="mapa" role="img" aria-label="Mapa ilustrativo da localização: SHIS QI 15, Lago Sul, Brasília">
+            <svg viewBox="0 0 600 300" aria-hidden="true" focusable="false">
+              <path d="M0 210h600M0 96h600M150 0v300M400 0v300" stroke="currentColor" stroke-width="1" opacity=".3"/>
+              <path d="M0 150c120-40 220 40 340 6s180-70 260-50" stroke="currentColor" stroke-width="1.5" fill="none" opacity=".5"/>
+              <circle cx="400" cy="152" r="7" fill="currentColor"/>
+              <circle cx="400" cy="152" r="20" fill="none" stroke="currentColor" stroke-width="1" opacity=".45"/>
+            </svg>
+            <p>SHIS QI 15 · Lago Sul</p>
+          </div>
+        </div>
+
+        <!-- Formulário estático: não envia nada a servidor algum -->
+        <form class="form reveal" id="form-contato" novalidate>
+          <p class="intro">Deixe seus dados e retornamos em até um dia útil.</p>
+
+          <div class="campo">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" autocomplete="name" required minlength="3" placeholder="Seu nome completo">
+            <span class="erro" data-erro="nome" hidden>Informe seu nome completo.</span>
+          </div>
+
+          <div class="campo">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" autocomplete="email" required placeholder="voce@exemplo.com">
+            <span class="erro" data-erro="email" hidden>Informe um e-mail válido.</span>
+          </div>
+
+          <div class="campo-duplo">
+            <div class="campo">
+              <label for="cidade">Cidade</label>
+              <input type="text" id="cidade" name="cidade" autocomplete="address-level2" required placeholder="Sua cidade">
+              <span class="erro" data-erro="cidade" hidden>Informe sua cidade.</span>
+            </div>
+
+            <div class="campo">
+              <label for="estado">Estado</label>
+              <select id="estado" name="estado" required>
+                <option value="">Selecione</option>
+                <option value="AC">Acre</option>
+                <option value="AL">Alagoas</option>
+                <option value="AP">Amapá</option>
+                <option value="AM">Amazonas</option>
+                <option value="BA">Bahia</option>
+                <option value="CE">Ceará</option>
+                <option value="DF">Distrito Federal</option>
+                <option value="ES">Espírito Santo</option>
+                <option value="GO">Goiás</option>
+                <option value="MA">Maranhão</option>
+                <option value="MT">Mato Grosso</option>
+                <option value="MS">Mato Grosso do Sul</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="PA">Pará</option>
+                <option value="PB">Paraíba</option>
+                <option value="PR">Paraná</option>
+                <option value="PE">Pernambuco</option>
+                <option value="PI">Piauí</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="RN">Rio Grande do Norte</option>
+                <option value="RS">Rio Grande do Sul</option>
+                <option value="RO">Rondônia</option>
+                <option value="RR">Roraima</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="SP">São Paulo</option>
+                <option value="SE">Sergipe</option>
+                <option value="TO">Tocantins</option>
+              </select>
+              <span class="erro" data-erro="estado" hidden>Selecione o estado.</span>
+            </div>
+          </div>
+
+          <button class="btn btn-p" type="submit">Enviar</button>
+
+          <p class="aviso">Esta é uma página acadêmica: nada é enviado ou armazenado.</p>
+          <p class="ok" id="form-confirmacao" role="status" tabindex="-1" hidden></p>
+        </form>
+
+      </div>
+    </section>
+
+    <!-- =========================== CTA FINAL =========================== -->
+    <section class="final" aria-labelledby="final-titulo">
+      <div class="wrap">
+        <p class="eyebrow reveal">Vamos começar</p>
+        <h2 class="reveal" id="final-titulo">Quarenta minutos<br>só seus.</h2>
+        <p class="sub reveal">Agende uma primeira conversa — sem pressa, no seu tempo.</p>
+        <div class="reveal"><a class="btn btn-p" href="#contato">Agendar consulta</a></div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================= RODAPÉ ============================= -->
+  <footer class="foot">
+    <div class="wrap foot-grid">
+      <div>
+        <span class="logo">Vitalis</span>
+        <p style="margin-top:10px">Cuidar é presença</p>
+      </div>
+
+      <nav aria-labelledby="rodape-paginas">
+        <h2 id="rodape-paginas">Páginas</h2>
+        <ul>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#equipe">Equipe</a></li>
+          <li><a href="#depoimentos">Depoimentos</a></li>
+          <li><a href="#faq">Perguntas frequentes</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <h2 id="rodape-contato">Contato</h2>
+        <ul aria-labelledby="rodape-contato">
+          <li><a href="tel:+556132004100">(61) 3200-4100</a></li>
+          <li><a href="mailto:contato@clinicavitalis.com.br">contato@clinicavitalis.com.br</a></li>
+          <li>SHIS QI 15, Bloco C, Sala 204 — Lago Sul, Brasília/DF</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="wrap foot-fim">
+      <p>© <span id="ano">2026</span> Clínica Vitalis</p>
+      <p>Projeto acadêmico fictício — clínica, equipe e depoimentos não existem.</p>
+    </div>
+  </footer>
+
+  <!-- Agendar pelo WhatsApp: canto ESQUERDO, longe dos controles à direita.
+       Fica oculto (visibility) até passar o hero, para não entrar no
+       tab order enquanto ninguém o vê. -->
+  <div class="wa">
+    <a class="wa__link" href="https://wa.me/55619XXXXXXXX" aria-label="Agendar pelo WhatsApp"
+       target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+        <path d="M12.04 2.5A9.44 9.44 0 0 0 2.6 11.94c0 1.66.44 3.29 1.27 4.72L2.5 21.5l4.98-1.3a9.4 9.4 0 0 0 4.56 1.17h.01a9.44 9.44 0 0 0 0-18.87zm0 17.3h-.01a7.85 7.85 0 0 1-4-1.09l-.29-.17-2.96.77.79-2.88-.19-.3a7.83 7.83 0 1 1 6.66 3.67zm4.3-5.87c-.24-.12-1.4-.69-1.61-.77s-.38-.12-.54.12-.62.77-.76.93-.28.18-.51.06a6.42 6.42 0 0 1-1.89-1.17 7.1 7.1 0 0 1-1.31-1.63c-.14-.24 0-.36.1-.48s.24-.28.35-.42a1.6 1.6 0 0 0 .24-.39.44.44 0 0 0 0-.42c-.06-.12-.54-1.3-.74-1.77s-.39-.4-.54-.41h-.46a.89.89 0 0 0-.64.3 2.69 2.69 0 0 0-.84 2 4.68 4.68 0 0 0 .98 2.48 10.7 10.7 0 0 0 4.1 3.62 13.4 13.4 0 0 0 1.37.5 3.3 3.3 0 0 0 1.51.1 2.47 2.47 0 0 0 1.62-1.14 2 2 0 0 0 .14-1.14c-.06-.1-.22-.16-.46-.28z"/>
+      </svg>
+      <span>Agendar</span>
+    </a>
+    <span class="wa__aviso">demonstração acadêmica</span>
+  </div>
+
+  <!-- Controles de exibição: acessibilidade é recurso visível, não escondida -->
+  <div class="controles">
+    <button class="controles__a11y" id="modo-acessivel" type="button" aria-pressed="false">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.6"/>
+        <circle cx="12" cy="7.2" r="1.5" fill="currentColor"/>
+        <path d="M7.4 10.2h9.2M12 10.6V17M12 13.4l-2.6 3.8M12 13.4l2.6 3.8"
+              fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+      </svg>
+      <span>Modo acessível</span>
+    </button>
+    <button class="controles__tema" id="tg" type="button"
+            aria-label="Alternar tema claro e escuro" aria-pressed="false">◐</button>
+  </div>
+
+  <!-- Confirma por voz o que o botão acima fez -->
+  <p class="sr-so" id="a11y-aviso" role="status" aria-live="polite"></p>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

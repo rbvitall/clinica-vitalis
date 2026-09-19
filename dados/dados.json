@@ -1,0 +1,322 @@
+{
+  "clinica": {
+    "nome": "Clínica Vitalis",
+    "slogan": "Cuidar é presença",
+    "descricao": "Somos uma clínica pequena por escolha: menos pacientes por dia, mais tempo em cada consulta. Aqui ninguém é atendido com pressa.",
+    "hero_linha1": "Cuidar",
+    "hero_linha2": "é presença",
+    "hero_sub": "Uma clínica pensada no tempo de cada paciente — do primeiro olhar ao acompanhamento.",
+    "prova": {
+      "nota": 4.9,
+      "nota_texto": "4,9/5",
+      "nota_rotulo": "avaliação média de 8.400 pacientes",
+      "itens": [
+        "8.400+ pacientes atendidos",
+        "12 anos de cuidado",
+        "Equipe registrada no CRM/DF"
+      ]
+    },
+    "manifesto_linha1": "Menos pressa.",
+    "manifesto_linha2": "Mais",
+    "manifesto_enfase": "atenção",
+    "manifesto_linha3": "ao que realmente importa.",
+    "lead_escuro": "Doze anos cuidando de gente de verdade.",
+    "telefone": "(61) 3200-4100",
+    "telefone_link": "+556132004100",
+    "email": "contato@clinicavitalis.com.br",
+    "endereco": "SHIS QI 15, Bloco C, Sala 204 — Lago Sul, Brasília/DF",
+    "horario": "Segunda a sexta, 8h às 19h · Sábado, 8h às 12h",
+    "metricas": [
+      {
+        "rotulo": "anos de cuidado",
+        "valor": "12",
+        "count": 12
+      },
+      {
+        "rotulo": "pacientes acompanhados",
+        "valor": "8.400+",
+        "count": 8400,
+        "suffix": "+"
+      },
+      {
+        "rotulo": "avaliação média",
+        "valor": "4,9/5",
+        "count": 49,
+        "div": 10,
+        "suffix": "/5"
+      }
+    ],
+    "seo_titulo": "Clínica Vitalis — consultas de 40 minutos no Lago Sul, Brasília",
+    "seo_descricao": "Clínica de saúde em Brasília com consultas de 40 minutos: clínica geral, exames, nutrição e procedimentos. Equipe registrada, agenda curta de propósito.",
+    "whatsapp": {
+      "numero": "55619XXXXXXXX",
+      "rotulo": "Agendar",
+      "aria": "Agendar pelo WhatsApp"
+    }
+  },
+  "marquee": [
+    "check-up anual",
+    "nutrição clínica",
+    "exames laboratoriais",
+    "vacinas",
+    "saúde da mulher",
+    "acompanhamento contínuo",
+    "clínica geral",
+    "diagnóstico por imagem",
+    "pequenos procedimentos",
+    "saúde do idoso"
+  ],
+  "selos": [
+    "Registro CRM/DF ativo",
+    "Dados protegidos pela LGPD",
+    "Consulta de 40 minutos",
+    "Retorno sem custo em 30 dias"
+  ],
+  "servicos": [
+    {
+      "id": "atendimento",
+      "titulo": "Atendimento médico",
+      "descricao": "Consultas de clínica geral e acompanhamento contínuo, com quarenta minutos reservados para ouvir antes de indicar qualquer conduta.",
+      "imagem": "assets/img/servico-atendimento.jpg",
+      "alt": "Foto de um consultório médico acolhedor, com estetoscópio e prontuário sobre a mesa."
+    },
+    {
+      "id": "exames",
+      "titulo": "Exames e imagem",
+      "descricao": "Coleta no próprio consultório e encaminhamento para imagem em parceiros credenciados, com resultado comentado pessoalmente.",
+      "imagem": "assets/img/servico-exames.jpg",
+      "alt": "Foto de um laboratório com tubos de coleta de sangue e equipamento de ultrassom ao fundo."
+    },
+    {
+      "id": "nutricao",
+      "titulo": "Nutrição",
+      "descricao": "Planos alimentares construídos a partir da sua rotina real, sem dietas genéricas e sem metas que não cabem na sua semana.",
+      "imagem": "assets/img/servico-nutricao.jpg",
+      "alt": "Foto de uma mesa com prato saudável de salmão, quinoa e legumes, frutas e vegetais frescos."
+    },
+    {
+      "id": "procedimentos",
+      "titulo": "Procedimentos",
+      "descricao": "Pequenos procedimentos ambulatoriais, curativos, aplicação de vacinas e acompanhamento pós-operatório em ambiente tranquilo.",
+      "imagem": "assets/img/servico-procedimentos.jpg",
+      "alt": "Foto de uma sala de procedimentos organizada, com bandeja de materiais e maca."
+    }
+  ],
+  "equipe": [
+    {
+      "nome": "Dra. Helena Marchetti",
+      "cargo": "Clínica geral · Diretora técnica",
+      "registro": "CRM/DF 12345",
+      "descricao": "Doze anos em consultório próprio, dedicados ao acompanhamento longo das mesmas famílias.",
+      "imagem": "assets/img/equipe-helena.jpg",
+      "alt": "Foto da Dra. Helena Marchetti, clínica geral, de jaleco branco em seu consultório."
+    },
+    {
+      "nome": "Dr. Ivo Nakamura",
+      "cargo": "Medicina interna",
+      "registro": "CRM/DF 23456",
+      "descricao": "Cuida de casos crônicos com um princípio simples: nenhum exame pedido sem explicação.",
+      "imagem": "assets/img/equipe-ivo.jpg",
+      "alt": "Foto do Dr. Ivo Nakamura, medicina interna, na clínica."
+    },
+    {
+      "nome": "Dr. Daniel Tavares",
+      "cargo": "Procedimentos e diagnóstico",
+      "registro": "CRM/DF 34567",
+      "descricao": "Responsável pelos procedimentos ambulatoriais e pela leitura dos exames, com atenção aos detalhes.",
+      "imagem": "assets/img/equipe-daniel.jpg",
+      "alt": "Foto do Dr. Daniel Tavares, procedimentos e diagnóstico, durante um atendimento."
+    }
+  ],
+  "depoimentos": [
+    {
+      "nome": "Marina Toledo",
+      "cidade": "Brasília, DF",
+      "nota": 5,
+      "texto": "Saí da consulta sabendo exatamente o que eu tinha e por quê. Foi a primeira vez que isso aconteceu."
+    },
+    {
+      "nome": "Renato Alvim",
+      "cidade": "Águas Claras, DF",
+      "nota": 5,
+      "texto": "Acompanham minha pressão há três anos. Ligam para saber do resultado antes que eu pergunte."
+    },
+    {
+      "nome": "Sofia Bandeira",
+      "cidade": "Goiânia, GO",
+      "nota": 4,
+      "texto": "Vale a viagem. O tempo de consulta muda completamente a conversa com o médico."
+    }
+  ],
+  "faq": [
+    {
+      "pergunta": "Vocês atendem por convênio?",
+      "resposta": "Atendemos de forma particular e emitimos recibo com CRM para reembolso em todos os principais planos. A secretaria orienta o processo de cada convênio."
+    },
+    {
+      "pergunta": "Quais são os horários de atendimento?",
+      "resposta": "De segunda a sexta, das 8h às 19h, e aos sábados das 8h às 12h. Coletas de exame acontecem apenas pela manhã, até as 10h."
+    },
+    {
+      "pergunta": "Como funciona a primeira consulta?",
+      "resposta": "Ela dura quarenta minutos e começa pela sua história, não pelo exame. Traga exames anteriores e a lista de medicamentos em uso, se houver."
+    },
+    {
+      "pergunta": "Como faço para agendar ou remarcar?",
+      "resposta": "Pelo telefone (61) 3200-4100 ou pelo formulário desta página. Retornamos em até um dia útil; remarcações são gratuitas com 24 horas de antecedência."
+    }
+  ],
+  "estados": [
+    [
+      "AC",
+      "Acre"
+    ],
+    [
+      "AL",
+      "Alagoas"
+    ],
+    [
+      "AP",
+      "Amapá"
+    ],
+    [
+      "AM",
+      "Amazonas"
+    ],
+    [
+      "BA",
+      "Bahia"
+    ],
+    [
+      "CE",
+      "Ceará"
+    ],
+    [
+      "DF",
+      "Distrito Federal"
+    ],
+    [
+      "ES",
+      "Espírito Santo"
+    ],
+    [
+      "GO",
+      "Goiás"
+    ],
+    [
+      "MA",
+      "Maranhão"
+    ],
+    [
+      "MT",
+      "Mato Grosso"
+    ],
+    [
+      "MS",
+      "Mato Grosso do Sul"
+    ],
+    [
+      "MG",
+      "Minas Gerais"
+    ],
+    [
+      "PA",
+      "Pará"
+    ],
+    [
+      "PB",
+      "Paraíba"
+    ],
+    [
+      "PR",
+      "Paraná"
+    ],
+    [
+      "PE",
+      "Pernambuco"
+    ],
+    [
+      "PI",
+      "Piauí"
+    ],
+    [
+      "RJ",
+      "Rio de Janeiro"
+    ],
+    [
+      "RN",
+      "Rio Grande do Norte"
+    ],
+    [
+      "RS",
+      "Rio Grande do Sul"
+    ],
+    [
+      "RO",
+      "Rondônia"
+    ],
+    [
+      "RR",
+      "Roraima"
+    ],
+    [
+      "SC",
+      "Santa Catarina"
+    ],
+    [
+      "SP",
+      "São Paulo"
+    ],
+    [
+      "SE",
+      "Sergipe"
+    ],
+    [
+      "TO",
+      "Tocantins"
+    ]
+  ],
+  "primeira_consulta": [
+    {
+      "id": "agende",
+      "icone": "calendario",
+      "titulo": "Agende",
+      "texto": "Escolha o dia e o horário que cabem na sua rotina — por telefone, WhatsApp ou pelo formulário desta página."
+    },
+    {
+      "id": "acolhimento",
+      "icone": "escuta",
+      "titulo": "Acolhimento",
+      "texto": "Recepção sem fila, escuta e avaliação sem pressa. A consulta dura cerca de quarenta minutos e começa pela sua história."
+    },
+    {
+      "id": "continuidade",
+      "icone": "continuidade",
+      "titulo": "Cuidado contínuo",
+      "texto": "Você sai com um plano claro, escrito. O acompanhamento segue por telefone, e o retorno em 30 dias não tem custo."
+    }
+  ],
+  "primeira_consulta_trazer": "O que trazer: um documento com foto e, se tiver, exames anteriores e a lista de medicamentos em uso.",
+  "sobre": {
+    "olho": "Nossa história",
+    "titulo": "Por que existimos",
+    "paragrafos": [
+      "A Vitalis nasceu de um incômodo simples: consultas de sete minutos não dão conta de gente. Em 2014 abrimos uma sala no Lago Sul com uma regra que nunca mudou — menos pacientes por dia.",
+      "Somos uma clínica pequena por escolha. A agenda é curta de propósito, para que ninguém seja atendido com pressa e para que a mesma pessoa acompanhe você ao longo dos anos."
+    ],
+    "valores": [
+      {
+        "titulo": "Tempo",
+        "texto": "Quarenta minutos por consulta, sempre. O relógio não decide quando a conversa acaba."
+      },
+      {
+        "titulo": "Escuta",
+        "texto": "Ouvir antes de indicar. Nenhum exame é pedido sem uma explicação que você entenda."
+      },
+      {
+        "titulo": "Proximidade",
+        "texto": "Poucos profissionais, os mesmos rostos. Ligamos para saber do resultado antes que você pergunte."
+      }
+    ]
+  }
+}

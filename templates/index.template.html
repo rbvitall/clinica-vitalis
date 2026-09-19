@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{SEO_TITULO}}</title>
+  <meta name="description" content="{{SEO_DESCRICAO}}">
+  <meta name="theme-color" content="#F6F5F0">
+  <meta name="author" content="{{NOME}}">
+
+  <!-- Open Graph: como o link aparece ao ser compartilhado -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="{{NOME}}">
+  <meta property="og:title" content="{{SEO_TITULO}}">
+  <meta property="og:description" content="{{SEO_DESCRICAO}}">
+  <meta property="og:image" content="assets/img/favicon.svg">
+
+  <!-- Tipografia: Cormorant (títulos) + Public Sans (corpo) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Public+Sans:wght@400;500;600&display=swap">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+
+  <!-- Sem JS e sem animation-timeline, o reveal não pode esconder o conteúdo -->
+  <noscript><style>.reveal{opacity:1!important;transform:none!important;animation:none!important}</style></noscript>
+</head>
+<body>
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- =========================== BARRA FIXA ========================== -->
+  <div class="bar">
+    <a class="logo" href="#topo">Vitalis</a>
+    <button class="bar-menu" type="button" aria-expanded="false" aria-controls="nav-principal">Menu</button>
+    <nav id="nav-principal" aria-label="Navegação principal">
+      <a href="#servicos">Serviços</a>
+      <a href="#equipe">Equipe</a>
+      <a href="#depoimentos">Depoimentos</a>
+      <a href="#faq">Dúvidas</a>
+      <a href="#contato">Contato</a>
+      <!-- O CTA primário fica sempre ao alcance, no topo -->
+      <a class="btn btn-p bar-cta" href="#contato">Agendar consulta</a>
+    </nav>
+  </div>
+
+  <main id="conteudo">
+
+    <!-- ============================== HERO ============================= -->
+    <!-- EFEITO 1: orbs animados + paralaxe · EFEITO 2: plate inclinado em 3D -->
+    <section class="hero" id="topo">
+      <div class="hero-layer" data-speed="0.15" aria-hidden="true">
+        <span class="orb o1"></span><span class="orb o2"></span><span class="orb o3"></span>
+      </div>
+      <div class="hero-layer" data-speed="0.32" aria-hidden="true"><span class="sun"></span></div>
+      <div class="hero-layer" data-speed="0.06" aria-hidden="true">
+        <svg class="hills" viewBox="0 0 1440 400" preserveAspectRatio="none" focusable="false">
+          <path d="M0 240 C 220 150 420 300 720 220 C 1000 150 1200 300 1440 210 L1440 400 L0 400Z" fill="#cdd2bd"/>
+          <path d="M0 300 C 260 230 520 340 820 280 C 1080 230 1280 340 1440 290 L1440 400 L0 400Z" fill="#b9c0a2"/>
+        </svg>
+      </div>
+
+      <div class="hero-plate" id="plate">
+        <p class="eyebrow">{{NOME}}</p>
+        <h1>{{HERO_L1}}<br>{{HERO_L2}}</h1>
+        <p class="sub">{{HERO_SUB}}</p>
+        <div class="hero-cta">
+          <a class="btn btn-p" href="#contato">Agendar consulta</a>
+          <a class="btn btn-g" href="#servicos">Conhecer serviços</a>
+        </div>
+
+        <!-- Confiança na dobra: a prova fica ao lado do primeiro CTA -->
+        {{PROVA}}
+      </div>
+
+    </section>
+
+    <!-- ============================ MARQUEE ============================ -->
+    <!-- EFEITO 7: faixa em loop infinito. A segunda cópia é só visual. -->
+    <section class="marquee" aria-label="Especialidades e serviços da clínica">
+      <div class="marquee__track">
+        <div class="marquee__grupo">{{MARQUEE}}</div>
+        <div class="marquee__grupo" aria-hidden="true">{{MARQUEE}}</div>
+      </div>
+    </section>
+
+    <!-- =========================== MANIFESTO =========================== -->
+    <section class="manifesto wrap" aria-labelledby="manifesto-titulo">
+      <h2 class="reveal" id="manifesto-titulo">{{MANIFESTO}}</h2>
+    </section>
+
+    <!-- ===================== SERVIÇOS EM PROFUNDIDADE ================== -->
+    <!-- EFEITO 3: seção presa (sticky); os painéis avançam em Z ao rolar -->
+    <section class="pin-wrap" id="servicos" style="height:{{PIN_ALTURA}}" aria-labelledby="servicos-titulo">
+      <div class="pin">
+        <div class="pin-title">
+          <p class="eyebrow">O que fazemos</p>
+          <h2 id="servicos-titulo">Nossos serviços</h2>
+        </div>
+
+        {{SERVICOS}}
+
+        <div class="progress" aria-hidden="true">
+          {{PROGRESSO}}
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== SUA PRIMEIRA CONSULTA ==================== -->
+    <!-- O que esperar, em três passos. Tira o medo de marcar. -->
+    <section class="passos-sec" id="primeira-consulta" aria-labelledby="passos-titulo">
+      <div class="wrap">
+        <div class="secao-head reveal">
+          <p class="eyebrow">Sem surpresas</p>
+          <h2 id="passos-titulo">Como é a sua<br>primeira consulta</h2>
+        </div>
+
+        <ol class="passos">
+          {{PRIMEIRA_CONSULTA}}
+        </ol>
+
+        <p class="trazer reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+               stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+            <path d="M14.5 3.5H7a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/>
+            <path d="M14.5 3.5V8H19M8.5 13h7M8.5 16.5h4.5"/>
+          </svg>
+          {{TRAZER}}
+        </p>
+      </div>
+    </section>
+
+    <!-- ========================== SEÇÃO ESCURA ========================= -->
+    <!-- EFEITO 4: contadores sobem na viewport; o brilho faz paralaxe -->
+    <section class="dark" aria-labelledby="numeros-titulo">
+      <div class="glow" data-speed="0.2" aria-hidden="true"></div>
+      <div class="wrap">
+        <h2 class="lead reveal" id="numeros-titulo">{{LEAD_ESCURO}}</h2>
+
+        <dl class="stats">
+          {{METRICAS}}
+        </dl>
+
+        <ul class="selos reveal">
+          {{SELOS}}
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================= EQUIPE ============================ -->
+    <section class="team-sec wrap" id="equipe" aria-labelledby="equipe-titulo">
+      <div class="team-head reveal">
+        <div>
+          <p class="eyebrow">Quem atende</p>
+          <h2 id="equipe-titulo">Quem cuida<br>de você</h2>
+        </div>
+        <p>Profissionais registrados e dedicados a um atendimento próximo, com agenda curta de propósito.</p>
+      </div>
+      <div class="team">
+        {{EQUIPE}}
+      </div>
+    </section>
+
+    <!-- ========================== NOSSA HISTÓRIA ======================= -->
+    <section class="sobre-sec" id="sobre" aria-labelledby="sobre-titulo">
+      <div class="wrap">
+        <div class="secao-head reveal">
+          <p class="eyebrow">{{SOBRE_OLHO}}</p>
+          <h2 id="sobre-titulo">{{SOBRE_TITULO}}</h2>
+        </div>
+        <div class="sobre-grid">
+          {{SOBRE}}
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FAIXA FULL-BLEED (parallax) ===================== -->
+    <section class="photo-band" aria-label="Ambiente da Clínica Vitalis">
+      <div class="photo-band__media"><img class="photo-band__img" src="assets/img/clinica-ambiente.jpg" alt="Recepção acolhedora da Clínica Vitalis, com poltronas verdes, madeira clara e plantas."></div>
+      <div class="photo-band__overlay reveal">
+        <p class="photo-band__eyebrow">Um lugar para respirar</p>
+        <p class="photo-band__frase">Um cuidado no seu tempo,<br>desde a porta.</p>
+      </div>
+    </section>
+
+    <!-- ========================== DEPOIMENTOS ========================== -->
+    <section class="depo-sec" id="depoimentos" aria-labelledby="depoimentos-titulo">
+      <div class="wrap">
+        <div class="secao-head reveal">
+          <p class="eyebrow">Quem já veio</p>
+          <h2 id="depoimentos-titulo">Depoimentos</h2>
+        </div>
+        <div class="depos">
+          {{DEPOIMENTOS}}
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== FAQ ============================== -->
+    <section class="faq-sec" id="faq" aria-labelledby="faq-titulo">
+      <div class="wrap faq-grid">
+        <div class="reveal">
+          <p class="eyebrow">Antes de vir</p>
+          <h2 class="secao-head" id="faq-titulo" style="margin-bottom:0">Perguntas<br>frequentes</h2>
+        </div>
+        <div class="faq-lista">
+          {{FAQ}}
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ CONTATO ============================ -->
+    <section class="contato-sec" id="contato" aria-labelledby="contato-titulo">
+      <div class="wrap contato-grid">
+
+        <div class="reveal">
+          <p class="eyebrow">Fale com a clínica</p>
+          <h2 class="secao-head" id="contato-titulo" style="margin-bottom:0">Agendar<br>consulta</h2>
+
+          <dl class="dados">
+            <div>
+              <dt>Telefone</dt>
+              <dd><a href="tel:{{TELEFONE_LINK}}">{{TELEFONE}}</a></dd>
+            </div>
+            <div>
+              <dt>E-mail</dt>
+              <dd><a href="mailto:{{EMAIL}}">{{EMAIL}}</a></dd>
+            </div>
+            <div>
+              <dt>Endereço</dt>
+              <dd>{{ENDERECO}}</dd>
+            </div>
+            <div>
+              <dt>Horário</dt>
+              <dd>{{HORARIO}}</dd>
+            </div>
+          </dl>
+
+          <!-- Placeholder de mapa desenhado em SVG — nenhum recurso externo -->
+          <div class="mapa" role="img" aria-label="Mapa ilustrativo da localização: SHIS QI 15, Lago Sul, Brasília">
+            <svg viewBox="0 0 600 300" aria-hidden="true" focusable="false">
+              <path d="M0 210h600M0 96h600M150 0v300M400 0v300" stroke="currentColor" stroke-width="1" opacity=".3"/>
+              <path d="M0 150c120-40 220 40 340 6s180-70 260-50" stroke="currentColor" stroke-width="1.5" fill="none" opacity=".5"/>
+              <circle cx="400" cy="152" r="7" fill="currentColor"/>
+              <circle cx="400" cy="152" r="20" fill="none" stroke="currentColor" stroke-width="1" opacity=".45"/>
+            </svg>
+            <p>SHIS QI 15 · Lago Sul</p>
+          </div>
+        </div>
+
+        <!-- Formulário estático: não envia nada a servidor algum -->
+        <form class="form reveal" id="form-contato" novalidate>
+          <p class="intro">Deixe seus dados e retornamos em até um dia útil.</p>
+
+          <div class="campo">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" autocomplete="name" required minlength="3" placeholder="Seu nome completo">
+            <span class="erro" data-erro="nome" hidden>Informe seu nome completo.</span>
+          </div>
+
+          <div class="campo">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" autocomplete="email" required placeholder="voce@exemplo.com">
+            <span class="erro" data-erro="email" hidden>Informe um e-mail válido.</span>
+          </div>
+
+          <div class="campo-duplo">
+            <div class="campo">
+              <label for="cidade">Cidade</label>
+              <input type="text" id="cidade" name="cidade" autocomplete="address-level2" required placeholder="Sua cidade">
+              <span class="erro" data-erro="cidade" hidden>Informe sua cidade.</span>
+            </div>
+
+            <div class="campo">
+              <label for="estado">Estado</label>
+              <select id="estado" name="estado" required>
+                <option value="">Selecione</option>
+                {{ESTADOS}}
+              </select>
+              <span class="erro" data-erro="estado" hidden>Selecione o estado.</span>
+            </div>
+          </div>
+
+          <button class="btn btn-p" type="submit">Enviar</button>
+
+          <p class="aviso">Esta é uma página acadêmica: nada é enviado ou armazenado.</p>
+          <p class="ok" id="form-confirmacao" role="status" tabindex="-1" hidden></p>
+        </form>
+
+      </div>
+    </section>
+
+    <!-- =========================== CTA FINAL =========================== -->
+    <section class="final" aria-labelledby="final-titulo">
+      <div class="wrap">
+        <p class="eyebrow reveal">Vamos começar</p>
+        <h2 class="reveal" id="final-titulo">Quarenta minutos<br>só seus.</h2>
+        <p class="sub reveal">Agende uma primeira conversa — sem pressa, no seu tempo.</p>
+        <div class="reveal"><a class="btn btn-p" href="#contato">Agendar consulta</a></div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================= RODAPÉ ============================= -->
+  <footer class="foot">
+    <div class="wrap foot-grid">
+      <div>
+        <span class="logo">Vitalis</span>
+        <p style="margin-top:10px">{{SLOGAN}}</p>
+      </div>
+
+      <nav aria-labelledby="rodape-paginas">
+        <h2 id="rodape-paginas">Páginas</h2>
+        <ul>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#equipe">Equipe</a></li>
+          <li><a href="#depoimentos">Depoimentos</a></li>
+          <li><a href="#faq">Perguntas frequentes</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <h2 id="rodape-contato">Contato</h2>
+        <ul aria-labelledby="rodape-contato">
+          <li><a href="tel:{{TELEFONE_LINK}}">{{TELEFONE}}</a></li>
+          <li><a href="mailto:{{EMAIL}}">{{EMAIL}}</a></li>
+          <li>{{ENDERECO}}</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="wrap foot-fim">
+      <p>© <span id="ano">{{ANO}}</span> {{NOME}}</p>
+      <p>Projeto acadêmico fictício — clínica, equipe e depoimentos não existem.</p>
+    </div>
+  </footer>
+
+  <!-- Agendar pelo WhatsApp: canto ESQUERDO, longe dos controles à direita.
+       Fica oculto (visibility) até passar o hero, para não entrar no
+       tab order enquanto ninguém o vê. -->
+  <div class="wa">
+    <a class="wa__link" href="{{WHATSAPP_LINK}}" aria-label="{{WHATSAPP_ARIA}}"
+       target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+        <path d="M12.04 2.5A9.44 9.44 0 0 0 2.6 11.94c0 1.66.44 3.29 1.27 4.72L2.5 21.5l4.98-1.3a9.4 9.4 0 0 0 4.56 1.17h.01a9.44 9.44 0 0 0 0-18.87zm0 17.3h-.01a7.85 7.85 0 0 1-4-1.09l-.29-.17-2.96.77.79-2.88-.19-.3a7.83 7.83 0 1 1 6.66 3.67zm4.3-5.87c-.24-.12-1.4-.69-1.61-.77s-.38-.12-.54.12-.62.77-.76.93-.28.18-.51.06a6.42 6.42 0 0 1-1.89-1.17 7.1 7.1 0 0 1-1.31-1.63c-.14-.24 0-.36.1-.48s.24-.28.35-.42a1.6 1.6 0 0 0 .24-.39.44.44 0 0 0 0-.42c-.06-.12-.54-1.3-.74-1.77s-.39-.4-.54-.41h-.46a.89.89 0 0 0-.64.3 2.69 2.69 0 0 0-.84 2 4.68 4.68 0 0 0 .98 2.48 10.7 10.7 0 0 0 4.1 3.62 13.4 13.4 0 0 0 1.37.5 3.3 3.3 0 0 0 1.51.1 2.47 2.47 0 0 0 1.62-1.14 2 2 0 0 0 .14-1.14c-.06-.1-.22-.16-.46-.28z"/>
+      </svg>
+      <span>{{WHATSAPP_ROTULO}}</span>
+    </a>
+    <span class="wa__aviso">demonstração acadêmica</span>
+  </div>
+
+  <!-- Controles de exibição: acessibilidade é recurso visível, não escondida -->
+  <div class="controles">
+    <button class="controles__a11y" id="modo-acessivel" type="button" aria-pressed="false">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.6"/>
+        <circle cx="12" cy="7.2" r="1.5" fill="currentColor"/>
+        <path d="M7.4 10.2h9.2M12 10.6V17M12 13.4l-2.6 3.8M12 13.4l2.6 3.8"
+              fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+      </svg>
+      <span>Modo acessível</span>
+    </button>
+    <button class="controles__tema" id="tg" type="button"
+            aria-label="Alternar tema claro e escuro" aria-pressed="false">◐</button>
+  </div>
+
+  <!-- Confirma por voz o que o botão acima fez -->
+  <p class="sr-so" id="a11y-aviso" role="status" aria-live="polite"></p>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
