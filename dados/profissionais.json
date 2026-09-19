@@ -1,0 +1,64 @@
+{
+  "clinica": {
+    "nome": "Clínica Vitalis",
+    "cidade": "Brasília, DF",
+    "observacao": "Dados fictícios para fins acadêmicos (Projetos 02 e 03). Nenhuma pessoa real é retratada."
+  },
+  "especialidades": [
+    { "id": "clinica-geral",  "nome": "Clínica Geral" },
+    { "id": "medicina-interna", "nome": "Medicina Interna" },
+    { "id": "nutricao", "nome": "Nutrição" },
+    { "id": "exames-imagem", "nome": "Exames e Imagem" },
+    { "id": "procedimentos", "nome": "Procedimentos" }
+  ],
+  "profissionais": [
+    {
+      "id": 1,
+      "nome": "Dra. Helena Marchetti",
+      "especialidade": "clinica-geral",
+      "registro": "CRM/DF 12345",
+      "atende_dias": ["seg", "ter", "qua", "qui", "sex"],
+      "horarios": ["08:00", "09:00", "10:00", "14:00", "15:00"]
+    },
+    {
+      "id": 2,
+      "nome": "Dr. Ivo Nakamura",
+      "especialidade": "medicina-interna",
+      "registro": "CRM/DF 23456",
+      "atende_dias": ["seg", "qua", "sex"],
+      "horarios": ["08:00", "09:00", "10:00", "11:00"]
+    },
+    {
+      "id": 3,
+      "nome": "Dr. Daniel Tavares",
+      "especialidade": "procedimentos",
+      "registro": "CRM/DF 34567",
+      "atende_dias": ["ter", "qui"],
+      "horarios": ["13:00", "14:00", "15:00", "16:00"]
+    },
+    {
+      "id": 4,
+      "nome": "Dra. Carla Bittencourt",
+      "especialidade": "nutricao",
+      "registro": "CRN/DF 5210",
+      "atende_dias": ["seg", "ter", "qua", "qui"],
+      "horarios": ["09:00", "10:00", "11:00", "16:00", "17:00"]
+    },
+    {
+      "id": 5,
+      "nome": "Dr. Paulo Rezende",
+      "especialidade": "exames-imagem",
+      "registro": "CRM/DF 45678",
+      "atende_dias": ["seg", "ter", "qua", "qui", "sex"],
+      "horarios": ["07:30", "08:30", "09:30", "10:30"]
+    },
+    {
+      "id": 6,
+      "nome": "Dra. Beatriz Fontes",
+      "especialidade": "clinica-geral",
+      "registro": "CRM/DF 56789",
+      "atende_dias": ["qua", "qui", "sex"],
+      "horarios": ["14:00", "15:00", "16:00", "17:00"]
+    }
+  ]
+}
