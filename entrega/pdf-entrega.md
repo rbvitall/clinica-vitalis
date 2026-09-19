@@ -57,7 +57,7 @@ O projeto segue uma direção visual **imersiva**, definida antes da implementa�
 contraste entre uma serifada grande e leve (Cormorant) e uma sans miúda
 (Public Sans), paleta de baixa saturação (`#F6F5F0`, `#20241D`, `#7C8B6F`,
 `#54613F`, `#161C15`) e, sobretudo, movimento — a página tem vida já parada e
-ganha profundidade ao rolar. As regras estão em `CLAUDE.md` e no
+ganha profundidade ao rolar. As regras estão em `clinicaLP.md` e no
 `BRIEF-IMERSIVO.md`, com uma implementação de referência em `referencia/`.
 
 Sete efeitos, todos em CSS e JavaScript puro, sem nenhuma biblioteca:

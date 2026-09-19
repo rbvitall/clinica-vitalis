@@ -19,14 +19,14 @@ projeto e a aba do repositório no GitHub.
 
 ## 0:30 – 1:00 · A decisão de design
 
-> "Antes de codar, defini uma direção de arte e escrevi ela num `CLAUDE.md`,
+> "Antes de codar, defini uma direção de arte e escrevi ela num `clinicaLP.md`,
 > para não cair no visual genérico de landing page. A direção é imersiva: a
 > página tem vida já parada — essas esferas de luz ficam flutuando sozinhas — e
 > ganha profundidade conforme você rola. A tipografia é Cormorant, uma serifada
 > grande e leve, contra a Public Sans bem miúda, numa paleta de baixa saturação.
 > São sete efeitos ao todo, e eu vou mostrando cada um."
 
-**Tela:** rolar rapidamente o `CLAUDE.md` mostrando o bloco da direção de arte.
+**Tela:** rolar rapidamente o `clinicaLP.md` mostrando o bloco da direção de arte.
 
 ---
 

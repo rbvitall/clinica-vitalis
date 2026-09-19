@@ -16,7 +16,7 @@ no servidor**.
 
 O projeto segue uma direção visual **imersiva**: a página tem vida já parada
 (esferas de luz flutuando no hero) e ganha profundidade conforme se rola.
-A direção está documentada em [`CLAUDE.md`](CLAUDE.md), com o brief em
+A direção está documentada em [`clinicaLP.md`](clinicaLP.md), com o brief em
 [`BRIEF-IMERSIVO.md`](BRIEF-IMERSIVO.md) e a implementação de referência em
 `referencia/vitalis-immersive-referencia.html`.
 
@@ -146,7 +146,7 @@ O script imprime um resumo e falha se sobrar algum marcador `{{...}}`.
 ```
 clinica-vitalis/
 ├── index.html                    # página publicada (gerada, versionada)
-├── CLAUDE.md                     # direção de arte e regras do projeto
+├── clinicaLP.md                     # direção de arte e regras do projeto
 ├── README.md
 ├── .gitignore
 ├── css/
